@@ -6,6 +6,8 @@
     <title>Portfolio</title>
     <!-- Add Google Fonts for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
@@ -134,6 +136,20 @@
             font-size: 1em;
         }
 
+        /* Icons Styling */
+        .social-icons {
+            display: flex;
+            gap: 20px; /* Space between icons */
+        }
+        .social-icons a {
+            color: white;
+            font-size: 2em;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2); /* Hover effect */
+        }
+
         /* Section Background Colors */
         #who { background: lightblue; }
         #what { background: lightgreen; }
@@ -250,12 +266,21 @@
             <div class="hero-image"></div>
             <div class="text-content">
                 <h1>Let’s Talk!</h1>
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
+                <p>Feel free to reach out to me via LinkedIn, Email, or WhatsApp.</p>
+                <div class="social-icons">
+                    <!-- LinkedIn Icon -->
+                    <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <!-- Email Icon -->
+                    <a href="mailto:your-email@example.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <!-- WhatsApp Icon -->
+                    <a href="https://wa.me/your-phone-number" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
