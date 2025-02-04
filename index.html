@@ -1,86 +1,106 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amin Bedra - Personligt Brev</title>
+    <title>Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: 40px auto;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { scroll-behavior: smooth; }
+        .menu-button { 
+            position: fixed; 
+            top: 20px; left: 20px; 
+            background: #333; 
+            color: white; 
+            padding: 10px 15px; 
+            cursor: pointer; 
+            border-radius: 5px;
+        }
+        .menu { 
+            display: none; 
+            position: fixed; 
+            top: 50px; left: 20px; 
+            background: rgba(0, 0, 0, 0.8); 
+            padding: 10px; 
+            border-radius: 5px;
+        }
+        .menu a { 
+            display: block; 
+            color: white; 
+            text-decoration: none; 
+            margin: 5px 0; 
+            padding: 5px; 
+        }
+        .menu a:hover { background: #555; }
+        section { 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 2em; 
             padding: 20px;
-            background-color: #f4f4f4;
         }
-        .container {
-            background: white;
+        .content-container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+        }
+        .hero-image {
+            flex: 1;
+            background: gray;
+            height: 300px;
+        }
+        .text-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
         }
-        h1 {
-            color: #333;
-            font-size: 24px;
-            text-align: center;
-        }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .contact-info a {
-            color: #0073b1;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        p {
-            color: #444;
-            line-height: 1.6;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #333;
-        }
-        .signature {
-            margin-top: 20px;
-            font-style: italic;
-        }
+        #who { background: lightblue; }
+        #what { background: lightgreen; }
+        #how { background: amber; }
+        #lets-talk { background: lightcoral; }
     </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Amin Bedra</h1>
-        
-        <div class="contact-info">
-            📍 London & Sverige | 
-            🔗 <a href="https://www.linkedin.com/in/aminbedra" target="_blank">LinkedIn</a> | 
-            📧 <a href="mailto:aminbedra@gmail.com">aminbedra@gmail.com</a>
-        </div>
-
-        <p><strong>Till rekryteraren/hiring manager,</strong></p>
-
-        <p>Jag drivs av att hjälpa företag växa – både genom smarta marknadsstrategier och genom att skapa riktiga affärsresultat. Med över <span class="highlight">10 års erfarenhet av B2B-marknadsföring och försäljning</span>, och en bakgrund i internationell expansion, har jag hjälpt globala varumärken som <span class="highlight">LinkedIn, GE och Canon</span> att bredda sin närvaro på nya marknader.</p>
-
-        <p>Det jag erbjuder är en unik kombination av <span class="highlight">ABM (Account-Based Marketing), demand generation och affärsutveckling</span>, där jag kopplar samman marknadsföring och försäljning för att skapa en effektiv kundresa – från första kontakt till betalande konto. Med min erfarenhet inom <span class="highlight">marketing automation (Marketo, Salesforce) och CRM-strategi</span> har jag byggt system som skalar internationellt och skapar förutsättningar för hållbar tillväxt.</p>
-
-        <p>Jag söker en roll antingen som konsulterande resurs till er nuvarande organisation eller ett mer långsiktigt uppdrag som anställd, beroende på vad som bäst möter era behov.</p>
-
-        <p><strong>Det som gör mig unik:</strong></p>
-        <ul>
-            <li><span class="highlight">Flerspråkig & globalt perspektiv</span> – Jag talar svenska, engelska, arabiska och franska, vilket gör mig skicklig på att navigera internationella marknader och kulturella skillnader.</li>
-            <li><span class="highlight">Resultatdriven & strategisk</span> – Jag arbetar alltid med tydliga KPI:er och har en track record av att driva tillväxt genom data och insikter.</li>
-            <li><span class="highlight">Marknadsföring möter försäljning</span> – Jag bygger strategier som inte bara driver leads, utan ser till att de konverterar till affärer.</li>
-        </ul>
-
-        <p>Jag ser fram emot att höra mer om era utmaningar och hur jag kan bidra till att ta er internationella expansion till nästa nivå. <strong>Låt oss boka in ett samtal!</strong></p>
-
-        <p class="signature">Vänliga hälsningar,<br>
-        <strong>Amin Bedra</strong></p>
-   <!-- Profile Image -->
-<img src="amin-atlas.jpg" alt="Amin Bedra" class="profile-img" width="80" height="90">
-
-
+    <div class="menu-button" onclick="toggleMenu()">☰ Menu</div>
+    <div id="menu" class="menu">
+        <a href="#who">Who</a>
+        <a href="#what">What</a>
+        <a href="#how">How</a>
+        <a href="#lets-talk">Let’s Talk!</a>
     </div>
-
+    
+    <section id="who">
+        <div class="content-container">
+            <div class="hero-image"></div>
+            <div class="text-content">Who: About Me</div>
+        </div>
+    </section>
+    <section id="what">
+        <div class="content-container">
+            <div class="hero-image"></div>
+            <div class="text-content">What: My Skills</div>
+        </div>
+    </section>
+    <section id="how">
+        <div class="content-container">
+            <div class="hero-image"></div>
+            <div class="text-content">How: My Process</div>
+        </div>
+    </section>
+    <section id="lets-talk">
+        <div class="content-container">
+            <div class="hero-image"></div>
+            <div class="text-content">Let’s Talk: Contact Me</div>
+        </div>
+    </section>
 </body>
 </html>
