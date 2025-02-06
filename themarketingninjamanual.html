@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ninja Book Animation</title>
+    <title>GTM Ninja Playbook</title>
     <style>
         body {
-            background: #2c3e50;
+            background: #1a1a1a;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -14,7 +14,14 @@
             perspective: 1000px;
         }
 
-        /* Ninja animation */
+        /* Traffic Light Color Scheme */
+        :root {
+            --red: #e74c3c;
+            --amber: #f1c40f;
+            --green: #2ecc71;
+        }
+
+        /* Ninja styling */
         .ninja {
             width: 100px;
             height: 100px;
@@ -27,10 +34,11 @@
             position: absolute;
             width: 40px;
             height: 40px;
-            background: #333;
-            borderRadius: 50%;
+            background: var(--green);
+            border-radius: 50%;
             top: 0;
             left: 30px;
+            border: 3px solid var(--amber);
         }
 
         .ninja::after {
@@ -38,13 +46,14 @@
             position: absolute;
             width: 60px;
             height: 80px;
-            background: #333;
+            background: var(--green);
             top: 30px;
             left: 20px;
-            borderRadius: 20px;
+            border-radius: 20px;
+            box-shadow: 0 50px 0 var(--amber);
         }
 
-        /* Book animation */
+        /* Book styling */
         .book {
             position: relative;
             width: 200px;
@@ -58,7 +67,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background: #e74c3c;
+            background: var(--red);
             transform-origin: left center;
             transition: transform 1s ease-in-out;
             border-radius: 0 5px 5px 0;
@@ -69,7 +78,7 @@
             position: absolute;
             width: 95%;
             height: 95%;
-            background: #fff;
+            background: linear-gradient(to right, var(--amber) 0%, #f9f9f9 100%);
             top: 2.5%;
             left: 2.5%;
             transform: translateZ(-1px);
@@ -90,7 +99,14 @@
             }
         }
 
-        /* Layout */
+        /* Text styling */
+        .cover h2 {
+            color: white;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
         .container {
             display: flex;
             gap: 50px;
@@ -104,7 +120,7 @@
         <div class="book">
             <div class="pages"></div>
             <div class="cover">
-                <h2 style="color: white; padding: 20px;">CSS Secrets</h2>
+                <h2>GTM Playbook</h2>
             </div>
         </div>
     </div>
