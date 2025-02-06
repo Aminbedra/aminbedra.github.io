@@ -1,1 +1,112 @@
-themarketingninjamanual.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ninja Book Animation</title>
+    <style>
+        body {
+            background: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            perspective: 1000px;
+        }
+
+        /* Ninja animation */
+        .ninja {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: appear 2s ease-out forwards;
+        }
+
+        .ninja::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            borderRadius: 50%;
+            top: 0;
+            left: 30px;
+        }
+
+        .ninja::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            background: #333;
+            top: 30px;
+            left: 20px;
+            borderRadius: 20px;
+        }
+
+        /* Book animation */
+        .book {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        .cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #e74c3c;
+            transform-origin: left center;
+            transition: transform 1s ease-in-out;
+            border-radius: 0 5px 5px 0;
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .pages {
+            position: absolute;
+            width: 95%;
+            height: 95%;
+            background: #fff;
+            top: 2.5%;
+            left: 2.5%;
+            transform: translateZ(-1px);
+        }
+
+        .book:hover .cover {
+            transform: rotateY(-160deg);
+        }
+
+        @keyframes appear {
+            from {
+                transform: translateX(-100vw) rotate(360deg);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0) rotate(0);
+                opacity: 1;
+            }
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            gap: 50px;
+            transform-style: preserve-3d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ninja"></div>
+        <div class="book">
+            <div class="pages"></div>
+            <div class="cover">
+                <h2 style="color: white; padding: 20px;">CSS Secrets</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
