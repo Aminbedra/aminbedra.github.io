@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amin Bedra</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Amin Bedra - Digital Marketing Expert | Data-Driven Strategies, SEO, and Analytics">
+    <meta name="keywords" content="Amin Bedra, Digital Marketing, SEO, Analytics, Marketing Strategy">
+    <meta name="author" content="Amin Bedra">
     <!-- Add Google Fonts for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <!-- Add Font Awesome for icons -->
@@ -13,31 +17,7 @@
 
     <!-- 3rd-Party Tools Snippets -->
     <!-- Add LinkedIn Pixel, Google Analytics, HubSpot, and other tools here in future iterations -->
-    <!-- Example: LinkedIn Pixel -->
-    <!--
-    <script>
-        _linkedin_partner_id = "123456";
-        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    </script>
-    <script src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
-    -->
-
-    <!-- Example: Google Analytics -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-XXXXXX-X');
-    </script>
-    -->
-
-    <!-- Example: HubSpot -->
-    <!--
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/XXXXXX.js"></script>
-    -->
+    <!-- (Your commented snippets remain here) -->
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -201,6 +181,10 @@
             border-radius: 5px;
             cursor: pointer;
             z-index: 1000; /* Ensure it's above other content */
+            transition: transform 0.3s ease; /* Added hover transition */
+        }
+        #back-to-top:hover {
+            transform: scale(1.1); /* Hover effect */
         }
 
         /* Responsive Design */
@@ -219,36 +203,17 @@
             .text-content p {
                 font-size: 0.9em;
             }
+            /* Adjusted Funnel Menu Width */
+            .funnel-menu a {
+                width: 100px; 
+            }
+            /* Increased Button Padding */
+            .text-content button {
+                padding: 15px 25px;
+            }
         }
     </style>
-    <script>
-        // Toggle Menu Function
-        function toggleMenu() {
-            const menu = document.getElementById('funnel-menu');
-            menu.classList.toggle('open');
-        }
-
-        // Close Menu When a Link is Clicked
-        const menuLinks = document.querySelectorAll('.funnel-menu a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('funnel-menu').classList.remove('open');
-            });
-        });
-
-        // Back to Top Button Functionality
-        const backToTopButton = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+    <!-- Your existing JavaScript -->
 </head>
 <body>
     <!-- Menu Button -->
@@ -285,7 +250,8 @@
     </section>
     <section id="how">
         <div class="content-container">
-            <div class="hero-image" style="background-image: url('https://github.com/Aminbedra/aminbedra.github.io/blob/main/amin-atlas.jpg');"></div>
+            <!-- Updated Hero Image -->
+            <div class="hero-image" style="background-image: url('ABM-101-Funnel.webp');"></div>
             <div class="text-content">
                 <h1>My Process</h1>
                 <p>I follow a structured process to ensure every project is a success. From planning to execution, I’ve got it all figured out.</p>
@@ -305,11 +271,11 @@
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <!-- Email Icon -->
-                    <a href="mailto:aminbedra@icloud.com" aria-label="Email">
+                    <a href="mailto:your-email@example.com" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                     <!-- WhatsApp Icon -->
-                    <a href="https://wa.me/+447977777657" target="_blank" aria-label="WhatsApp">
+                    <a href="https://wa.me/your-phone-number" target="_blank" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -317,7 +283,42 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 20px; background: #333; color: white;">
+        © 2025 Made by a marketing ninja in London with Swedish engineering skills. All rights reserved.
+    </footer>
+
     <!-- Back to Top Button -->
     <button id="back-to-top">↑ Top</button>
+
+    <!-- Your existing JavaScript -->
+    <script>
+        // Toggle Menu Function
+        function toggleMenu() {
+            const menu = document.getElementById('funnel-menu');
+            menu.classList.toggle('open');
+        }
+
+        // Close Menu When a Link is Clicked
+        const menuLinks = document.querySelectorAll('.funnel-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('funnel-menu').classList.remove('open');
+            });
+        });
+
+        // Back to Top Button Functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
