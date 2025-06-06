@@ -212,10 +212,12 @@
                 <h1>Let’s Talk!</h1>
                 <p>Feel free to reach out to me via LinkedIn, Email, or WhatsApp.</p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/aminbedra/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:aminbedra@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/YOUR_NUMBER" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                </div>
+    <a href="https://www.linkedin.com/in/aminbedra/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:aminbedra@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://wa.me/YOUR_NUMBER" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <div id="myZadarmaCallmeWidget16147" aria-label="Call Me" style="display: inline-block;"></div>
+</div>
+
                 <div class="form-block">
                     <form action="https://formsubmit.co/aminbedra@gmail.com" method="POST">
                         <input type="text" name="name" placeholder="Your Name" required>
@@ -255,5 +257,50 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
+    <div id="zadarmaScripts"></div>
+<script>
+(function() {
+  var script = document.createElement('script');
+  script.src = 'https://my.zadarma.com/callmewidget/v2.0.9/loader.js';
+  document.getElementById('zadarmaScripts').appendChild(script);
+}());
+</script>
+
+<script>
+  var myZadarmaCallmeWidget16147;
+  var myZadarmaCallmeWidgetFn16147 = function() {
+    myZadarmaCallmeWidget16147 = new ZadarmaCallmeWidget("myZadarmaCallmeWidget16147");
+    myZadarmaCallmeWidget16147.create({
+      "widgetId": "2rmnJ8dh8xvrym4MrhjCb44zbz7rug8RceHnuBtcgF9PZpmV6ZeU358gcYa9P69CEbkd9rc2ybME4gfDZ2JXNv1Axdn54vr3ea970db6c191a384e751f3c8ce1c1e65",
+      "sipId": "991098",
+      "domElement": "myZadarmaCallmeWidget16147"
+    }, {
+      "shape": "square",
+      "language": "en",
+      "width": "0",
+      "dtmf": false,
+      "font": "'Trebuchet MS','Helvetica CY',sans-serif",
+      "color_call": "#fff",
+      "color_bg_call": "#7ed321",
+      "color_border_call": "#bfe990",
+      "color_connection": "#fff",
+      "color_bg_connection": "#21d3a6",
+      "color_border_connection": "#90e9d3",
+      "color_calling": "#fff",
+      "color_border_calling": "#ffda80",
+      "color_bg_calling": "#ffb500",
+      "color_ended": "#fff",
+      "color_bg_ended": "#a4a4a4",
+      "color_border_ended": "#d2d2d2"
+    });
+  };
+
+  if (window.addEventListener) {
+    window.addEventListener('load', myZadarmaCallmeWidgetFn16147, false);
+  } else if (window.attachEvent) {
+    window.attachEvent('onload', myZadarmaCallmeWidgetFn16147);
+  }
+</script>
+
 </body>
 </html>
