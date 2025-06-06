@@ -1,97 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amin Bedra</title>
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Amin Bedra - Digital Marketing Expert | Data-Driven Strategies, SEO, and Analytics">
     <meta name="keywords" content="Amin Bedra, Digital Marketing, SEO, Analytics, Marketing Strategy">
     <meta name="author" content="Amin Bedra">
-    <!-- Add Google Fonts for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Add Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Add Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    <!-- 3rd-Party Tools Snippets -->
-    <!-- Add LinkedIn Pixel, Google Analytics, HubSpot, and other tools here in future iterations -->
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z575EPK75B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z575EPK75B');
-</script>
-    <!-- (Your commented snippets remain here) -->
-    <!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/49182000.js"></script>
-<!-- End of HubSpot Embed Code -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z575EPK75B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z575EPK75B');
+    </script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/49182000.js"></script>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            scroll-behavior: smooth; 
-        }
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
 
-        /* Menu Button */
         .menu-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: #333;
-            color: white;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            z-index: 1000;
+            position: fixed; top: 20px; left: 20px;
+            background: #333; color: white;
+            padding: 10px 15px; cursor: pointer;
+            border-radius: 5px; z-index: 1000;
         }
 
-        /* Funnel Menu */
         .funnel-menu {
-            display: none;
-            position: fixed;
-            top: 60px;
-            left: 20px;
-            flex-direction: column;
-            align-items: center;
+            display: none; position: fixed;
+            top: 60px; left: 20px;
+            flex-direction: column; align-items: center;
             background: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            border-radius: 10px;
-            z-index: 1000;
+            padding: 10px; border-radius: 10px; z-index: 1000;
         }
 
-        /* Funnel Menu Items */
         .funnel-menu a {
-            display: block;
-            color: white;
+            display: block; color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 5px 0;
-            text-align: center;
-            width: 100px; /* Base width */
-            background: #444;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            padding: 10px 20px; margin: 5px 0;
+            text-align: center; background: #444;
+            border-radius: 5px; transition: all 0.3s ease;
         }
 
-        /* Funnel Shape: Gradually increase width */
-        .funnel-menu a:nth-child(1) { width: 100px; }
-        .funnel-menu a:nth-child(2) { width: 120px; }
-        .funnel-menu a:nth-child(3) { width: 140px; }
-        .funnel-menu a:nth-child(4) { width: 160px; }
-
-        /* Hover Effect */
         .funnel-menu a:hover {
             background: #555;
             transform: scale(1.1);
         }
 
-        /* Smooth Transition for Menu */
         .funnel-menu.open {
             display: flex;
             animation: slideDown 0.3s ease;
@@ -102,217 +62,184 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Section Styling */
-        section { 
-            height: 100vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 2em; 
-            padding: 20px;
-            transition: transform 0.3s ease; /* Add hover effect */
-        }
-        section:hover {
-            transform: scale(1.02); /* Subtle hover effect */
+        .split-section {
+            padding: 60px 20px;
+            display: flex; align-items: center; justify-content: center;
         }
 
-        /* Content Container Styling */
-        .content-container {
-            display: flex;
-            width: 80%;
-            max-width: 1200px;
+        .split-section .content-container {
+            display: flex; align-items: center; justify-content: space-between;
+            max-width: 1200px; gap: 40px; width: 100%; flex-wrap: wrap;
         }
 
-        /* Hero Image Styling */
-        .hero-image {
+        .split-section .image-block {
+            flex: 1; display: flex; justify-content: center;
+        }
+
+        .split-section .image-block img {
+            max-width: 100%; max-height: 350px;
+            border-radius: 15px; object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .split-section .text-block {
             flex: 1;
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            border-radius: 10px; /* Rounded corners */
+            display: flex; flex-direction: column; gap: 20px;
         }
 
-        /* Text Content Styling */
-        .text-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            text-align: center; /* Center-align text */
-        }
-        .text-content h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        .text-content p {
-            font-size: 1em;
-            margin-bottom: 20px;
-        }
-        .text-content button {
+        .split-section .text-block h1 { font-size: 2.5em; }
+        .split-section .text-block p { font-size: 1.1em; }
+        .split-section .text-block button {
             padding: 10px 20px;
-            background: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
+            background: #333; color: white;
+            border: none; border-radius: 5px; cursor: pointer;
         }
 
-        /* Icons Styling */
-        .social-icons {
-            display: flex;
-            gap: 20px; /* Space between icons */
+        #lets-talk .form-block form {
+            display: flex; flex-direction: column; gap: 10px; margin-top: 20px; max-width: 400px;
         }
+
+        #lets-talk .form-block input, #lets-talk .form-block button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #lets-talk .form-block button {
+            background: #333; color: white;
+            border: none; cursor: pointer;
+        }
+
+        .social-icons {
+            display: flex; gap: 20px;
+        }
+
         .social-icons a {
-            color: white;
-            font-size: 2em;
+            color: white; font-size: 2em;
             transition: transform 0.3s ease;
         }
+
         .social-icons a:hover {
-            transform: scale(1.2); /* Hover effect */
+            transform: scale(1.2);
         }
 
-        /* Section Background Colors */
         #who { background: lightblue; }
         #what { background: lightgreen; }
-        #how { background: #ffc107; /* Amber */ }
+        #how { background: #ffc107; }
         #lets-talk { background: lightcoral; }
 
-        /* Back to Top Button Styling */
         #back-to-top {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px;
-            background: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 1000; /* Ensure it's above other content */
-            transition: transform 0.3s ease; /* Added hover transition */
-        }
-        #back-to-top:hover {
-            transform: scale(1.1); /* Hover effect */
+            display: none; position: fixed;
+            bottom: 20px; right: 20px;
+            padding: 10px; background: #333;
+            color: white; border: none;
+            border-radius: 5px; cursor: pointer;
+            z-index: 1000; transition: transform 0.3s ease;
         }
 
-        /* Responsive Design */
+        #back-to-top:hover {
+            transform: scale(1.1);
+        }
+
         @media (max-width: 768px) {
-            .content-container {
-                flex-direction: column;
-                text-align: center;
+            .split-section .content-container {
+                flex-direction: column; text-align: center;
             }
-            .hero-image {
-                height: 200px;
-                margin-bottom: 20px;
+
+            .split-section .text-block {
+                align-items: center;
             }
-            .text-content h1 {
-                font-size: 2em;
-            }
-            .text-content p {
-                font-size: 0.9em;
-            }
-            /* Adjusted Funnel Menu Width */
-            .funnel-menu a {
-                width: 100px; 
-            }
-            /* Increased Button Padding */
-            .text-content button {
-                padding: 15px 25px;
-            }
+
+            .split-section .text-block h1 { font-size: 2em; }
+            .split-section .text-block p { font-size: 1em; }
         }
     </style>
-    <!-- Your existing JavaScript -->
 </head>
 <body>
-    <!-- Menu Button -->
-    <div class="menu-button" onclick="toggleMenu()" aria-label="Toggle menu" role="button" tabindex="0">☰ Menu</div>
-
-    <!-- Funnel Menu -->
-    <div id="funnel-menu" class="funnel-menu" role="menu">
-        <a href="#who" role="menuitem">Who</a>
-        <a href="#what" role="menuitem">What</a>
-        <a href="#how" role="menuitem">How</a>
-        <a href="#lets-talk" role="menuitem">Let’s Talk</a>
+    <div class="menu-button" onclick="toggleMenu()">☰ Menu</div>
+    <div id="funnel-menu" class="funnel-menu">
+        <a href="#who">Who</a>
+        <a href="#what">What</a>
+        <a href="#how">How</a>
+        <a href="#lets-talk">Let’s Talk</a>
     </div>
 
-    <!-- Sections -->
-    <section id="who">
-    <div class="content-container">
-        <div class="hero-image" style="background-image: url('Amin-Marketing.JPG');"></div>
-        <div class="text-content">
-            <h1>About Me</h1>
-            <p>Hi, I’m Amin Bedra, a passionate marketer with expertise in digital marketing, analytics, and strategy. Let’s create something amazing together!</p>
-            <a href="https://bit.ly/learn-more-linkedin" target="_blank"><button>Learn More</button></a>
-        </div>
-    </div>
-</section>
-
-    <section id="what">
+    <section id="who" class="split-section">
         <div class="content-container">
-            <div class="hero-image" style="background-image: url('https://client-data.knak.io/production/email_assets/645cedbaabcdc/84PVXIDmvZHi8CFCiQEdR2NP3ErCldjxd1l8YNYX.jpg');"></div>
-            <div class="text-content">
+            <div class="image-block">
+                <img src="Amin-Marketing.JPG" alt="Amin Bedra">
+            </div>
+            <div class="text-block">
+                <h1>About Me</h1>
+                <p>Hi, I’m Amin Bedra, a passionate marketer with expertise in digital marketing, analytics, and strategy. Let’s create something amazing together!</p>
+                <a href="https://bit.ly/learn-more-linkedin" target="_blank"><button>Learn More</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="what" class="split-section">
+        <div class="content-container">
+            <div class="image-block">
+                <img src="https://client-data.knak.io/production/email_assets/645cedbaabcdc/84PVXIDmvZHi8CFCiQEdR2NP3ErCldjxd1l8YNYX.jpg" alt="Skills">
+            </div>
+            <div class="text-block">
                 <h1>My Skills</h1>
-                <p>I specialize in digital marketing, SEO, and data-driven strategies. Whether it’s campaigns, analytics, or optimization, I’ve got you covered.</p>
+                <p>I specialise in digital marketing, SEO, and data-driven strategies. Whether it’s campaigns, analytics, or optimisation, I’ve got you covered.</p>
                 <a href="projects.html"><button>View Projects</button></a>
             </div>
         </div>
     </section>
-    <section id="how">
+
+    <section id="how" class="split-section">
         <div class="content-container">
-            <!-- Updated Hero Image -->
-            <div class="hero-image" style="background-image: url('ABM-101-Funnel.webp');"></div>
-            <div class="text-content">
+            <div class="image-block">
+                <img src="ABM-101-Funnel.webp" alt="Process">
+            </div>
+            <div class="text-block">
                 <h1>My Process</h1>
                 <p>I follow a structured process to ensure every project is a success. From planning to execution, I’ve got it all figured out.</p>
                 <a href="themarketingninjamanual.html"><button>See How</button></a>
             </div>
         </div>
     </section>
-    <section id="lets-talk">
+
+    <section id="lets-talk" class="split-section">
         <div class="content-container">
-            <div class="hero-image" style="background-image: url('https://client-data.knak.io/production/email_assets/645cedbaabcdc/2JwFabO8aSBxJqFXPe9zFeOpBKz6I6nMRUb5jwu2.jpg');"></div>
-            <div class="text-content">
+            <div class="image-block">
+                <img src="https://client-data.knak.io/production/email_assets/645cedbaabcdc/2JwFabO8aSBxJqFXPe9zFeOpBKz6I6nMRUb5jwu2.jpg" alt="Contact">
+            </div>
+            <div class="text-block">
                 <h1>Let’s Talk!</h1>
                 <p>Feel free to reach out to me via LinkedIn, Email, or WhatsApp.</p>
                 <div class="social-icons">
-                    <!-- LinkedIn Icon -->
-                    <a href="https://www.linkedin.com/in/aminbedra/" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <!-- Email Icon -->
-                    <a href="mailto:aminbedra@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <!-- WhatsApp Icon -->
-                    <a href="https://wa.me/07977777657" target="_blank" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                    <a href="https://www.linkedin.com/in/aminbedra/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:aminbedra@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/YOUR_NUMBER" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="form-block">
+                    <form action="https://formsubmit.co/aminbedra@gmail.com" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="hidden" name="_next" value="https://aminbedra.com/thank-you.html">
+                        <button type="submit">Send</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer style="text-align: center; padding: 20px; background: #333; color: white;">
         © 2025 Made by a marketing ninja in London with Swedish engineering skills. All rights reserved.
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="back-to-top">↑ Top</button>
 
-    <!-- Your existing JavaScript -->
     <script>
-        // Toggle Menu Function
         function toggleMenu() {
             const menu = document.getElementById('funnel-menu');
             menu.classList.toggle('open');
         }
 
-        // Close Menu When a Link is Clicked
         const menuLinks = document.querySelectorAll('.funnel-menu a');
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -320,14 +247,9 @@
             });
         });
 
-        // Back to Top Button Functionality
         const backToTopButton = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
+            backToTopButton.style.display = window.scrollY > 500 ? 'block' : 'none';
         });
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
