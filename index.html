@@ -1,12 +1,306 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Amin Bedra</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amin Bedra</title>
+    <meta name="description" content="Amin Bedra - Digital Marketing Expert | Data-Driven Strategies, SEO, and Analytics">
+    <meta name="keywords" content="Amin Bedra, Digital Marketing, SEO, Analytics, Marketing Strategy">
+    <meta name="author" content="Amin Bedra">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z575EPK75B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z575EPK75B');
+    </script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/49182000.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+
+        .menu-button {
+            position: fixed; top: 20px; left: 20px;
+            background: #333; color: white;
+            padding: 10px 15px; cursor: pointer;
+            border-radius: 5px; z-index: 1000;
+        }
+
+        .funnel-menu {
+            display: none; position: fixed;
+            top: 60px; left: 20px;
+            flex-direction: column; align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px; border-radius: 10px; z-index: 1000;
+        }
+
+        .funnel-menu a {
+            display: block; color: white;
+            text-decoration: none;
+            padding: 10px 20px; margin: 5px 0;
+            text-align: center; background: #444;
+            border-radius: 5px; transition: all 0.3s ease;
+        }
+
+        .funnel-menu a:hover {
+            background: #555;
+            transform: scale(1.1);
+        }
+
+        .funnel-menu.open {
+            display: flex;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .split-section {
+            padding: 60px 20px;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .split-section .content-container {
+            display: flex; align-items: center; justify-content: space-between;
+            max-width: 1200px; gap: 40px; width: 100%; flex-wrap: wrap;
+        }
+
+        .split-section .image-block {
+            flex: 1; display: flex; justify-content: center;
+        }
+
+        .split-section .image-block img {
+            max-width: 100%; max-height: 350px;
+            border-radius: 15px; object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .split-section .text-block {
+            flex: 1;
+            display: flex; flex-direction: column; gap: 20px;
+        }
+
+        .split-section .text-block h1 { font-size: 2.5em; }
+        .split-section .text-block p { font-size: 1.1em; }
+        .split-section .text-block button {
+            padding: 10px 20px;
+            background: #333; color: white;
+            border: none; border-radius: 5px; cursor: pointer;
+        }
+
+        #lets-talk .form-block form {
+            display: flex; flex-direction: column; gap: 10px; margin-top: 20px; max-width: 400px;
+        }
+
+        #lets-talk .form-block input, #lets-talk .form-block button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #lets-talk .form-block button {
+            background: #333; color: white;
+            border: none; cursor: pointer;
+        }
+
+        .social-icons {
+            display: flex; gap: 20px;
+        }
+
+        .social-icons a {
+            color: white; font-size: 2em;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        #who { background: lightblue; }
+        #what { background: lightgreen; }
+        #how { background: #ffc107; }
+        #lets-talk { background: lightcoral; }
+
+        #back-to-top {
+            display: none; position: fixed;
+            bottom: 20px; right: 20px;
+            padding: 10px; background: #333;
+            color: white; border: none;
+            border-radius: 5px; cursor: pointer;
+            z-index: 1000; transition: transform 0.3s ease;
+        }
+
+        #back-to-top:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .split-section .content-container {
+                flex-direction: column; text-align: center;
+            }
+
+            .split-section .text-block {
+                align-items: center;
+            }
+
+            .split-section .text-block h1 { font-size: 2em; }
+            .split-section .text-block p { font-size: 1em; }
+        }
+    </style>
+</head>
 <body>
-    <p>Testing - fixed version</p>
+    <div class="menu-button" onclick="toggleMenu()">☰ Menu</div>
+    <div id="funnel-menu" class="funnel-menu">
+        <a href="#who">Who</a>
+        <a href="#what">What</a>
+        <a href="#how">How</a>
+        <a href="#lets-talk">Let’s Talk</a>
+    </div>
+
+    <section id="who" class="split-section">
+        <div class="content-container">
+            <div class="image-block">
+                <img src="Amin-Marketing.JPG" alt="Amin Bedra">
+            </div>
+            <div class="text-block">
+                <h1>About Me</h1>
+                <p>Hi, I’m Amin Bedra, a passionate marketer with expertise in digital marketing, analytics, and strategy. Let’s create something amazing together!</p>
+                <a href="https://bit.ly/learn-more-linkedin" target="_blank"><button>Learn More</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="what" class="split-section">
+        <div class="content-container">
+            <div class="image-block">
+                <img src="https://client-data.knak.io/production/email_assets/645cedbaabcdc/84PVXIDmvZHi8CFCiQEdR2NP3ErCldjxd1l8YNYX.jpg" alt="Skills">
+            </div>
+            <div class="text-block">
+                <h1>My Skills</h1>
+                <p>I specialise in digital marketing, SEO, and data-driven strategies. Whether it’s campaigns, analytics, or optimisation, I’ve got you covered.</p>
+                <a href="projects.html"><button>View Projects</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="how" class="split-section">
+        <div class="content-container">
+            <div class="image-block">
+                <img src="ABM-101-Funnel.webp" alt="Process">
+            </div>
+            <div class="text-block">
+                <h1>My Process</h1>
+                <p>I follow a structured process to ensure every project is a success. From planning to execution, I’ve got it all figured out.</p>
+                <a href="themarketingninjamanual.html"><button>See How</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="lets-talk" class="split-section">
+        <div class="content-container">
+            <div class="image-block">
+                <img src="https://client-data.knak.io/production/email_assets/645cedbaabcdc/2JwFabO8aSBxJqFXPe9zFeOpBKz6I6nMRUb5jwu2.jpg" alt="Contact">
+            </div>
+            <div class="text-block">
+                <h1>Let’s Talk!</h1>
+                <p>Feel free to reach out to me via LinkedIn, Email, or WhatsApp.</p>
+                <div class="social-icons">
+    <a href="https://www.linkedin.com/in/aminbedra/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:aminbedra@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://wa.me/YOUR_NUMBER" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <div id="myZadarmaCallmeWidget16147" aria-label="Call Me" style="display: inline-block;"></div>
+</div>
+
+                <div class="form-block">
+                    <form action="https://formsubmit.co/aminbedra@gmail.com" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="hidden" name="_next" value="https://aminbedra.com/thank-you.html">
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; background: #333; color: white;">
+        © 2025 Made by a marketing ninja in London with Swedish engineering skills. All rights reserved.
+    </footer>
+
+    <button id="back-to-top">↑ Top</button>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('funnel-menu');
+            menu.classList.toggle('open');
+        }
+
+        const menuLinks = document.querySelectorAll('.funnel-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('funnel-menu').classList.remove('open');
+            });
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTopButton.style.display = window.scrollY > 500 ? 'block' : 'none';
+        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <div id="zadarmaScripts"></div>
+<script>
+(function() {
+  var script = document.createElement('script');
+  script.src = 'https://my.zadarma.com/callmewidget/v2.0.9/loader.js';
+  document.getElementById('zadarmaScripts').appendChild(script);
+}());
+</script>
+
+<script>
+  var myZadarmaCallmeWidget16147;
+  var myZadarmaCallmeWidgetFn16147 = function() {
+    myZadarmaCallmeWidget16147 = new ZadarmaCallmeWidget("myZadarmaCallmeWidget16147");
+    myZadarmaCallmeWidget16147.create({
+      "widgetId": "2rmnJ8dh8xvrym4MrhjCb44zbz7rug8RceHnuBtcgF9PZpmV6ZeU358gcYa9P69CEbkd9rc2ybME4gfDZ2JXNv1Axdn54vr3ea970db6c191a384e751f3c8ce1c1e65",
+      "sipId": "991098",
+      "domElement": "myZadarmaCallmeWidget16147"
+    }, {
+      "shape": "square",
+      "language": "en",
+      "width": "0",
+      "dtmf": false,
+      "font": "'Trebuchet MS','Helvetica CY',sans-serif",
+      "color_call": "#fff",
+      "color_bg_call": "#7ed321",
+      "color_border_call": "#bfe990",
+      "color_connection": "#fff",
+      "color_bg_connection": "#21d3a6",
+      "color_border_connection": "#90e9d3",
+      "color_calling": "#fff",
+      "color_border_calling": "#ffda80",
+      "color_bg_calling": "#ffb500",
+      "color_ended": "#fff",
+      "color_bg_ended": "#a4a4a4",
+      "color_border_ended": "#d2d2d2"
+    });
+  };
+
+  if (window.addEventListener) {
+    window.addEventListener('load', myZadarmaCallmeWidgetFn16147, false);
+  } else if (window.attachEvent) {
+    window.attachEvent('onload', myZadarmaCallmeWidgetFn16147);
+  }
+</script>
+
 </body>
-</html></p>
-</body></title>
-    </head>
 </html>
