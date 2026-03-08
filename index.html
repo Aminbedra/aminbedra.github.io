@@ -1,16 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amin Bedra</title>
-    <meta name="description" content="Amin Bedra - Digital Marketing Expert | Data-Driven Strategies, SEO, and Analytics">
-    <meta name="keywords" content="Amin Bedra, Digital Marketing, SEO, Analytics, Marketing Strategy">
-    <meta name="author" content="Amin Bedra">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Amin Bedra | Digital Marketing Ninja</title>
+    
+    <meta name="description" content="Amin Bedra - Digital Marketing Expert specializing in ABM, SEO, and Data-Driven Growth.">
+    <meta property="og:title" content="Amin Bedra | Digital Marketing Ninja">
+    <meta property="og:description" content="Mastering the art of digital marketing with Swedish engineering precision.">
+    <meta property="og:image" content="Ninjabydaymarketerbynight.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z575EPK75B"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -21,171 +24,129 @@
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/49182000.js"></script>
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        :root {
+            --primary: #333;
+            --accent: #2ecc71; /* Ninja Green */
+            --text: #2d3436;
+            --glass: rgba(255, 255, 255, 0.8);
+        }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: #f4f7f6;
+        }
+
+        /* Modernized Menu */
         .menu-button {
             position: fixed; top: 20px; left: 20px;
-            background: #333; color: white;
-            padding: 10px 15px; cursor: pointer;
-            border-radius: 5px; z-index: 1000;
+            background: var(--primary); color: white;
+            padding: 12px 20px; cursor: pointer;
+            border-radius: 50px; z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
         }
+        .menu-button:hover { transform: scale(1.05); }
 
         .funnel-menu {
             display: none; position: fixed;
-            top: 60px; left: 20px;
-            flex-direction: column; align-items: center;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px; border-radius: 10px; z-index: 1000;
+            top: 80px; left: 20px;
+            flex-direction: column;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 15px; border-radius: 15px; z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.3);
         }
+        .funnel-menu.open { display: flex; animation: fadeIn 0.3s ease; }
 
-        .funnel-menu a {
-            display: block; color: white;
-            text-decoration: none;
-            padding: 10px 20px; margin: 5px 0;
-            text-align: center; background: #444;
-            border-radius: 5px; transition: all 0.3s ease;
-        }
-
-        .funnel-menu a:hover {
-            background: #555;
-            transform: scale(1.1);
-        }
-
-        .funnel-menu.open {
-            display: flex;
-            animation: slideDown 0.3s ease;
-        }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
+        /* Sections */
         .split-section {
-            padding: 60px 20px;
+            min-height: 100vh;
             display: flex; align-items: center; justify-content: center;
+            padding: 80px 20px;
+            opacity: 0; transform: translateY(30px);
+            transition: all 0.8s ease-out;
         }
+        .split-section.visible { opacity: 1; transform: translateY(0); }
 
-        .split-section .content-container {
+        .content-container {
             display: flex; align-items: center; justify-content: space-between;
-            max-width: 1200px; gap: 40px; width: 100%; flex-wrap: wrap;
+            max-width: 1100px; gap: 50px; width: 100%; flex-wrap: wrap;
         }
 
-        .split-section .image-block {
-            flex: 1; display: flex; justify-content: center;
+        .image-block img {
+            width: 100%; max-width: 450px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
-        .split-section .image-block img {
-            max-width: 100%; max-height: 350px;
-            border-radius: 15px; object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .text-block { flex: 1; min-width: 300px; }
+        .text-block h1 { font-size: 3rem; margin-bottom: 20px; color: var(--primary); }
+        
+        /* Interactive Elements */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary); color: white;
+            text-decoration: none; border-radius: 8px;
+            transition: all 0.3s; margin-top: 20px;
         }
+        .btn:hover { background: var(--accent); transform: translateY(-3px); }
 
-        .split-section .text-block {
-            flex: 1;
-            display: flex; flex-direction: column; gap: 20px;
-        }
+        /* Custom Section Backgrounds */
+        #who { background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); }
+        #what { background: #ffffff; }
+        #how { background: #fffbeb; }
+        #lets-talk { background: #fef2f2; }
 
-        .split-section .text-block h1 { font-size: 2.5em; }
-        .split-section .text-block p { font-size: 1.1em; }
-        .split-section .text-block button {
-            padding: 10px 20px;
-            background: #333; color: white;
-            border: none; border-radius: 5px; cursor: pointer;
-        }
-
-        #lets-talk .form-block form {
-            display: flex; flex-direction: column; gap: 10px; margin-top: 20px; max-width: 400px;
-        }
-
-        #lets-talk .form-block input, #lets-talk .form-block button {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        #lets-talk .form-block button {
-            background: #333; color: white;
-            border: none; cursor: pointer;
-        }
-
-        .social-icons {
-            display: flex; gap: 20px;
-        }
-
-        .social-icons a {
-            color: white; font-size: 2em;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            transform: scale(1.2);
-        }
-
-        #who { background: lightblue; }
-        #what { background: lightgreen; }
-        #how { background: #ffc107; }
-        #lets-talk { background: lightcoral; }
-
-        #back-to-top {
-            display: none; position: fixed;
-            bottom: 20px; right: 20px;
-            padding: 10px; background: #333;
-            color: white; border: none;
-            border-radius: 5px; cursor: pointer;
-            z-index: 1000; transition: transform 0.3s ease;
-        }
-
-        #back-to-top:hover {
-            transform: scale(1.1);
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         @media (max-width: 768px) {
-            .split-section .content-container {
-                flex-direction: column; text-align: center;
-            }
-
-            .split-section .text-block {
-                align-items: center;
-            }
-
-            .split-section .text-block h1 { font-size: 2em; }
-            .split-section .text-block p { font-size: 1em; }
+            .content-container { flex-direction: column; text-align: center; }
+            .text-block h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
-    <div class="menu-button" onclick="toggleMenu()">☰ Menu</div>
+
+    <div class="menu-button" onclick="toggleMenu()"><i class="fas fa-bars"></i> Menu</div>
     <div id="funnel-menu" class="funnel-menu">
-        <a href="#who">Who</a>
-        <a href="#what">What</a>
-        <a href="#how">How</a>
-        <a href="#lets-talk">Let’s Talk</a>
+        <a href="#who" class="btn">Who</a>
+        <a href="#what" class="btn">What</a>
+        <a href="#how" class="btn">How</a>
+        <a href="#lets-talk" class="btn">Let’s Talk</a>
     </div>
 
     <section id="who" class="split-section">
         <div class="content-container">
             <div class="image-block">
-                <img src="Amin-Marketing.JPG" alt="Amin Bedra">
+                <img src="Amin-Marketing.JPG" alt="Amin Bedra Marketing Professional">
             </div>
             <div class="text-block">
-                <h1>About Me</h1>
-                <p>Hi, I’m Amin Bedra, a passionate marketer with expertise in digital marketing, analytics, and strategy. Let’s create something amazing together!</p>
-                <a href="https://bit.ly/learn-more-linkedin" target="_blank"><button>Learn More</button></a>
+                <h1>Hi, I'm Amin.</h1>
+                <p>Digital Marketing expert with a flair for strategy and a background in Swedish engineering. I bridge the gap between creative marketing and technical execution.</p>
+                <a href="https://www.linkedin.com/in/aminbedra/" class="btn" target="_blank">Connect on LinkedIn</a>
             </div>
         </div>
     </section>
 
     <section id="what" class="split-section">
         <div class="content-container">
-            <div class="image-block">
-                <img src="https://client-data.knak.io/production/email_assets/645cedbaabcdc/84PVXIDmvZHi8CFCiQEdR2NP3ErCldjxd1l8YNYX.jpg" alt="Skills">
-            </div>
             <div class="text-block">
-                <h1>My Skills</h1>
-                <p>I specialise in digital marketing, SEO, and data-driven strategies. Whether it’s campaigns, analytics, or optimisation, I’ve got you covered.</p>
-                <a href="projects.html"><button>View Projects</button></a>
+                <h1>The Toolkit.</h1>
+                <p>I specialize in building automated growth engines using:</p>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li><i class="fas fa-check-circle" style="color:var(--accent)"></i> SEO & Performance Marketing</li>
+                    <li><i class="fas fa-check-circle" style="color:var(--accent)"></i> Marketing Automation (HubSpot expert)</li>
+                    <li><i class="fas fa-check-circle" style="color:var(--accent)"></i> Advanced Analytics & GTM</li>
+                </ul>
+                <a href="projects.html" class="btn">View Case Studies</a>
+            </div>
+            <div class="image-block">
+                <img src="amin-marketing-automation.jpg" alt="Marketing Automation Strategy">
             </div>
         </div>
     </section>
@@ -193,114 +154,51 @@
     <section id="how" class="split-section">
         <div class="content-container">
             <div class="image-block">
-                <img src="ABM-101-Funnel.webp" alt="Process">
+                <img src="ABM-101-Funnel.webp" alt="ABM Marketing Funnel">
             </div>
             <div class="text-block">
-                <h1>My Process</h1>
-                <p>I follow a structured process to ensure every project is a success. From planning to execution, I’ve got it all figured out.</p>
-                <a href="themarketingninjamanual.html"><button>See How</button></a>
+                <h1>The Process.</h1>
+                <p>My methodology flips the traditional funnel upside down to focus on high-value targets:</p>
+                <p><strong>1. Identification | 2. Engagement | 3. Purchase | 4. Advocacy</strong></p>
+                <a href="themarketingninjamanual.html" class="btn">The Ninja Manual</a>
             </div>
         </div>
     </section>
 
     <section id="lets-talk" class="split-section">
         <div class="content-container">
-            <div class="image-block">
-                <img src="https://client-data.knak.io/production/email_assets/645cedbaabcdc/2JwFabO8aSBxJqFXPe9zFeOpBKz6I6nMRUb5jwu2.jpg" alt="Contact">
-            </div>
             <div class="text-block">
-                <h1>Let’s Talk!</h1>
-                <p>Feel free to reach out to me via LinkedIn, Email, or WhatsApp.</p>
-                <div class="social-icons">
-    <a href="https://www.linkedin.com/in/aminbedra/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:aminbedra@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-    <a href="https://wa.me/YOUR_NUMBER" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <div id="myZadarmaCallmeWidget16147" aria-label="Call Me" style="display: inline-block;"></div>
-</div>
-
-                <div class="form-block">
-                    <form action="https://formsubmit.co/aminbedra@gmail.com" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="hidden" name="_next" value="https://aminbedra.com/thank-you.html">
-                        <button type="submit">Send</button>
-                    </form>
+                <h1>Let's Scale.</h1>
+                <p>Ready to automate your growth? Reach out directly.</p>
+                <div style="margin: 20px 0; font-size: 1.5rem;">
+                    <a href="https://www.linkedin.com/in/aminbedra/" style="margin-right:15px; color:var(--primary)"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:aminbedra@gmail.com" style="margin-right:15px; color:var(--primary)"><i class="fas fa-envelope"></i></a>
+                    <div id="myZadarmaCallmeWidget16147" style="display: inline-block;"></div>
                 </div>
+            </div>
+            <div class="image-block">
+                <img src="Ninjabydaymarketerbynight.png" alt="Ninja Marketer">
             </div>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 20px; background: #333; color: white;">
-        © 2025 Made by a marketing ninja in London with Swedish engineering skills. All rights reserved.
+    <footer style="text-align: center; padding: 40px; background: var(--primary); color: white;">
+        <p>© 2026 Amin Bedra. Built with precision and a touch of ninja magic.</p>
     </footer>
 
-    <button id="back-to-top">↑ Top</button>
-
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('funnel-menu');
-            menu.classList.toggle('open');
-        }
-
-        const menuLinks = document.querySelectorAll('.funnel-menu a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('funnel-menu').classList.remove('open');
+        // Intersection Observer for Scroll Effects
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
-        });
+        }, { threshold: 0.1 });
 
-        const backToTopButton = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            backToTopButton.style.display = window.scrollY > 500 ? 'block' : 'none';
-        });
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        document.querySelectorAll('.split-section').forEach(section => observer.observe(section));
+
+        function toggleMenu() {
+            document.getElementById('funnel-menu').classList.toggle('open');
+        }
     </script>
-    <div id="zadarmaScripts"></div>
-<script>
-(function() {
-  var script = document.createElement('script');
-  script.src = 'https://my.zadarma.com/callmewidget/v2.0.9/loader.js';
-  document.getElementById('zadarmaScripts').appendChild(script);
-}());
-</script>
-
-<script>
-  var myZadarmaCallmeWidget16147;
-  var myZadarmaCallmeWidgetFn16147 = function() {
-    myZadarmaCallmeWidget16147 = new ZadarmaCallmeWidget("myZadarmaCallmeWidget16147");
-    myZadarmaCallmeWidget16147.create({
-      "widgetId": "2rmnJ8dh8xvrym4MrhjCb44zbz7rug8RceHnuBtcgF9PZpmV6ZeU358gcYa9P69CEbkd9rc2ybME4gfDZ2JXNv1Axdn54vr3ea970db6c191a384e751f3c8ce1c1e65",
-      "sipId": "991098",
-      "domElement": "myZadarmaCallmeWidget16147"
-    }, {
-      "shape": "square",
-      "language": "en",
-      "width": "0",
-      "dtmf": false,
-      "font": "'Trebuchet MS','Helvetica CY',sans-serif",
-      "color_call": "#fff",
-      "color_bg_call": "#7ed321",
-      "color_border_call": "#bfe990",
-      "color_connection": "#fff",
-      "color_bg_connection": "#21d3a6",
-      "color_border_connection": "#90e9d3",
-      "color_calling": "#fff",
-      "color_border_calling": "#ffda80",
-      "color_bg_calling": "#ffb500",
-      "color_ended": "#fff",
-      "color_bg_ended": "#a4a4a4",
-      "color_border_ended": "#d2d2d2"
-    });
-  };
-
-  if (window.addEventListener) {
-    window.addEventListener('load', myZadarmaCallmeWidgetFn16147, false);
-  } else if (window.attachEvent) {
-    window.attachEvent('onload', myZadarmaCallmeWidgetFn16147);
-  }
-</script>
-
 </body>
 </html>
